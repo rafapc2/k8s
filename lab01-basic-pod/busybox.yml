@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: miprimer-pod
+  labels:
+    businessUnit: Bank-CL
+    environment: local
+    version: v1.0 
+    appId: miprimer-pod-v1.0
+    owner: myJourney
+    tier: Api-2-Back
+    App-role: API
+spec:
+  containers:
+  - name: miprimer-pod-v1.0-container
+    image: busybox
+    command: ['sh', 'c', 'echo Hola Kubernetes! && sleep 3600']
+    resources:
+      requests:
+        memory: "64mi"
+        cpu: "250m"
+      limits:
+        memory: "128mi"
+        cpu: "500m"
+  restartPolicy: OnFailure
