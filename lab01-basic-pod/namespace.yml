@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: namespace
+metadata:
+  name: dev1-mdw
+  labels:
+    environment: development
+    tier: middleware
+---
+apiVersion: v1
+kind: namespace
+metadata:
+  name: dev1-front
+  labels:
+    environment: development
+    tier: front-end
+---
+apiVersion: v1
+kind: namespace
+metadata:
+  name: dev1-back
+  labels:
+    environment: development
+    tier: back-end
